@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackathon VR Interest Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #0f0;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #333;
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"] + label {
+      margin-right: 15px;
+      color: #0f0;
+    }
+
+    select {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    textarea {
+      resize: none;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    button {
+      background-color: #ff1493;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+
+    button:hover {
+      background-color: #ff69b4;
+    }
+
+    button:disabled {
+      background-color: #333;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <form id="hackathonForm" action="https://formbold.com/s/3NL0J" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+    <label for="city">City:</label>
+    <select id="city" name="city" required>
+      <option value="" disabled selected>Select your city</option>
+      <option value="Kozhikode">Kozhikode</option>
+      <option value="Kochi">Kochi</option>
+      <option value="Both">Both</option>
+    </select>
+
+    <label>Which city are you interested in attending a hackathon in?</label>
+    <input type="radio" id="kozhikode" name="interestCity" value="Kozhikode">
+    <label for="kozhikode">Kozhikode</label>
+    <input type="radio" id="kochi" name="interestCity" value="Kochi">
+    <label for="kochi">Kochi</label>
+    
+    <label>Have you participated in hackathons before?</label>
+    <input type="radio" id="yes" name="participated" value="Yes">
+    <label for="yes">Yes</label>
+    <input type="radio" id="no" name="participated" value="No">
+    <label for="no">No</label>
+
+    <label>What is your level of expertise in development?</label>
+    <select id="expertise" name="expertise" required>
+      <option value="" disabled selected>Select your expertise level</option>
+      <option value="Beginner">Beginner</option>
+      <option value="Intermediate">Intermediate</option>
+      <option value="Advanced">Advanced</option>
+    </select>
+
+    <label>Which programming languages or technologies are you proficient in?</label>
+    <textarea id="languages" name="languages" placeholder="Enter languages/technologies"></textarea>
+
+    <label>What type of hackathons are you most interested in?</label>
+    <input type="checkbox" id="web" name="interestType" value="Web Development">
+    <label for="web">Web Development</label>
+    <!-- Add other checkboxes here -->
+
+    <label>Other (please specify):</label>
+    <input type="text" id="otherType" name="otherType" placeholder="Enter other interests">
+
+    <label>Are you interested in forming a team or participating individually?</label>
+    <input type="radio" id="team" name="team" value="Forming a team">
+    <label for="team">Forming a team</label>
+    <input type="radio" id="individual" name="team" value="Participating individually">
+    <label for="individual">Participating individually</label>
+
+    <label>Do you have any specific expectations or preferences for the hackathon(s) you would like to attend in Kozhikode or Kochi?</label>
+    <textarea id="expectations" name="expectations" placeholder="Enter expectations/preferences"></textarea>
+
+    <label>Would you like to receive updates about upcoming hackathons in Kozhikode and Kochi?</label>
+    <input type="radio" id="updatesYes" name="updates" value="Yes">
+    <label for="updatesYes">Yes</label>
+    <input type="radio" id="updatesNo" name="updates" value="No">
+    <label for="updatesNo">No</label>
+
+    <label>How did you hear about this form?</label>
+    <textarea id="hearAbout" name="hearAbout" placeholder="Enter source"></textarea>
+
+    <label>Any additional comments or questions?</label>
+    <textarea id="comments" name="comments" placeholder="Enter comments/questions"></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
