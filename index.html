@@ -7,8 +7,8 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
+      background-color: #1e1e1e;
+      color: #ffffff;
       padding: 20px;
     }
 
@@ -16,15 +16,15 @@
       max-width: 600px;
       margin: 0 auto;
       padding: 20px;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: #2a2a2a;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 10px rgba(0, 150, 136, 0.5);
     }
 
     label {
       display: block;
       margin-bottom: 10px;
-      color: #0f0;
+      color: #00e676;
     }
 
     input[type="text"],
@@ -35,32 +35,33 @@
       width: 100%;
       padding: 8px;
       margin-bottom: 15px;
-      border: 1px solid #333;
+      border: 1px solid #00acc1;
       border-radius: 4px;
-      background-color: rgba(255, 255, 255, 0.1);
-      color: #fff;
+      background-color: #424242;
+      color: #ffffff;
       box-sizing: border-box;
     }
 
-    input[type="radio"] + label {
-      margin-right: 15px;
-      color: #0f0;
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
     }
 
-    select {
-      background-color: rgba(255, 255, 255, 0.1);
-      color: #fff;
+    input[type="radio"] + label,
+    input[type="checkbox"] + label {
+      color: #00e676;
+      display: inline-block;
+      margin-right: 15px;
     }
 
     textarea {
       resize: none;
-      background-color: rgba(255, 255, 255, 0.1);
-      color: #fff;
+      height: 100px;
     }
 
     button {
-      background-color: #ff1493;
-      color: #fff;
+      background-color: #00e676;
+      color: #1e1e1e;
       padding: 10px 20px;
       border: none;
       border-radius: 4px;
@@ -69,17 +70,34 @@
     }
 
     button:hover {
-      background-color: #ff69b4;
+      background-color: #00c853;
     }
 
     button:disabled {
       background-color: #333;
       cursor: not-allowed;
     }
+
+    .info-message {
+      margin-bottom: 20px;
+      color: #00e676;
+      font-size: 1.2em;
+      text-align: center;
+    }
   </style>
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault(); // Prevent the default form submission
+      // Here you can handle the form data if needed
+      window.location.href = "https://chat.whatsapp.com/HYmGUYncbOr3vNZdNGszCZ";
+    }
+  </script>
 </head>
 <body>
-  <form action="mailto:adnanmuhammad4393@gmail.com" method="post" enctype="text/plain">
+  <div class="info-message">
+    Fill out the form and submit it to find hackathons suitable for you. We will get back to you with the best options!
+  </div>
+   <form action="mailto:adnanmuhammad4393@gmail.com" method="post" enctype="text/plain">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
@@ -102,14 +120,14 @@
     <label for="kozhikode">Kozhikode</label>
     <input type="radio" id="kochi" name="interestCity" value="Kochi">
     <label for="kochi">Kochi</label>
-    
+
     <label>Have you participated in hackathons before?</label>
     <input type="radio" id="yes" name="participated" value="Yes">
     <label for="yes">Yes</label>
     <input type="radio" id="no" name="participated" value="No">
     <label for="no">No</label>
 
-    <label>What is your level of expertise in development?</label>
+    <label for="expertise">What is your level of expertise in development?</label>
     <select id="expertise" name="expertise" required>
       <option value="" disabled selected>Select your expertise level</option>
       <option value="Beginner">Beginner</option>
@@ -117,15 +135,15 @@
       <option value="Advanced">Advanced</option>
     </select>
 
-    <label>Which programming languages or technologies are you proficient in?</label>
+    <label for="languages">Which programming languages or technologies are you proficient in?</label>
     <textarea id="languages" name="languages" placeholder="Enter languages/technologies"></textarea>
 
-    <label>What type of hackathons are you most interested in?</label>
+    <label for="interestType">What type of hackathons are you most interested in?</label>
     <input type="checkbox" id="web" name="interestType" value="Web Development">
     <label for="web">Web Development</label>
     <!-- Add other checkboxes here -->
 
-    <label>Other (please specify):</label>
+    <label for="otherType">Other (please specify):</label>
     <input type="text" id="otherType" name="otherType" placeholder="Enter other interests">
 
     <label>Are you interested in forming a team or participating individually?</label>
@@ -134,7 +152,7 @@
     <input type="radio" id="individual" name="team" value="Participating individually">
     <label for="individual">Participating individually</label>
 
-    <label>Do you have any specific expectations or preferences for the hackathon(s) you would like to attend in Kozhikode or Kochi?</label>
+    <label for="expectations">Do you have any specific expectations or preferences for the hackathon(s) you would like to attend in Kozhikode or Kochi?</label>
     <textarea id="expectations" name="expectations" placeholder="Enter expectations/preferences"></textarea>
 
     <label>Would you like to receive updates about upcoming hackathons in Kozhikode and Kochi?</label>
@@ -143,13 +161,13 @@
     <input type="radio" id="updatesNo" name="updates" value="No">
     <label for="updatesNo">No</label>
 
-    <label>How did you hear about this form?</label>
+    <label for="hearAbout">How did you hear about this form?</label>
     <textarea id="hearAbout" name="hearAbout" placeholder="Enter source"></textarea>
 
-    <label>Any additional comments or questions?</label>
+    <label for="comments">Any additional comments or questions?</label>
     <textarea id="comments" name="comments" placeholder="Enter comments/questions"></textarea>
 
-    <button type="submit">Submit</button>
+    <button type="submit" onclick="handleSubmit(event)">Submit</button>
   </form>
 </body>
 </html>
